@@ -31,6 +31,9 @@ createBooking('LH123', undefined, 1000);
 ///////////////////////////////////////////
 // How Passing Arguments Works: Value vs. Reference
 
+/*
+/////////////////////////////////////
+// How Passing Arguments Works: Value vs. Reference
 const flight = 'LH234';
 const ali = {
   name: 'Ali Sultan',
@@ -62,3 +65,4 @@ const newPassport = function (person) {
 
 newPassport(ali);
 checkIn(flight, ali);
+*/
