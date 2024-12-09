@@ -66,3 +66,5 @@ const newPassport = function (person) {
 newPassport(ali);
 checkIn(flight, ali);
 */
+////////////////////
+// First-Class and Higher-Order Functions
