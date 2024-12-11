@@ -121,7 +121,7 @@ greet('Hello')('Ali');
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 greetArr('Hi')('Ali');
 */
-
+/*
 //////////////////////////////////////
 // The call and apply Methods
 
@@ -153,6 +153,7 @@ const book = lufthansa.book;
 // Does not work
 // book(23, 'Sarah Williams');
 
+//////////////////////////////////////
 //Calll method
 book.call(eurowings, 23, 'Sarah Williams');
 console.log(eurowings);
@@ -167,14 +168,14 @@ const swiss = {
 };
 book.call(swiss, 583, 'Mary Molly');
 console.log(swiss);
-
+///////////////////////////////////////////
 //Apply Method
 const flightData = [583, 'George Cooper'];
 book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData);
-
+///////////////////////////////////////////
 //Bind Method
 // book.call(eurowings, 23, 'Sarah Williams');
 
@@ -188,6 +189,7 @@ const bookEW23 = book.bind(eurowings, 23);
 bookEW23('Ali Badran');
 bookEW23('Martha Cooper');
 
+///////////////////////////////////
 // With Event Listener
 lufthansa.planes = 300;
 lufthansa.buyPlane = function () {
@@ -202,6 +204,7 @@ document
   .querySelector('.buy')
   .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
 
+//////////////////////////////
 // Partial application
 const addTax = (rate, value) => value + value * rate;
 console.log(addTax(0.1, 200));
@@ -221,3 +224,45 @@ const addTaxRate = function (rate) {
 const addVAT2 = addTaxRate(0.23);
 console.log(addVAT(100));
 console.log(addVAT(23));
+*/
+
+// Challenge#1
+
+const poll = {
+  question: 'What is your favourite programming language?',
+  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+  // This generates [0, 0, 0, 0]. More in the next section!
+  answers: new Array(4).fill(0),
+  registerNewAnswer() {
+    // Get answer
+    const answer = Number(
+      prompt(
+        `${this.question}\n${this.options.join('\n')}\n(Write option number)`
+      )
+    );
+    console.log(answer);
+    // Register the answer
+    typeof answer === 'number' &&
+      answer < this.answers.length &&
+      this.answers[answer]++;
+
+    this.displayResults();
+    this.displayResults('string');
+  },
+  displayResults(type = 'array') {
+    if (type === 'array') {
+      console.log(this.answers);
+    } else if (type === 'string') {
+      // Poll results are 13, 2, 4, 1
+      console.log(`Poll results are ${this.answers.join(', ')}`);
+    }
+  },
+};
+// poll.registerNewAnswer();
+
+document
+  .querySelector('.poll')
+  .addEventListener('click', poll.registerNewAnswer.bind(poll));
+
+poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
+poll.displayResults.call({ answers: [1, 5, 3, 9, 6] }, 'string');
