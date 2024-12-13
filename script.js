@@ -100,3 +100,4 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.score').textContent = 20;
 });
 */ //Only main difference is he changed the secretNumber variable on line #13 from const to let
+// sdfsdcsdcsdc
