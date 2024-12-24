@@ -93,7 +93,6 @@ const createUsernames = function (accs) {
 };
 
 createUsernames(accounts);
-console.log(accounts);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -227,3 +226,23 @@ const movementDescription = movements.map(
 
 console.log(movementDescription);
 */
+
+//THE FILTER METHOD
+
+const deposit = movements.filter(function (mov) {
+  return mov > 0;
+});
+console.log(movements);
+console.log(deposit);
+
+const depositFor = [];
+for (const mov of movements) if (mov > 0) depositFor.push(mov);
+console.log(depositFor);
+
+//My Solution
+// const withdrawals = [];
+// for (const mov of movements) if (mov < 0) withdrawals.push(mov);
+// console.log(withdrawals);
+//Tutor'ssolution with filter methods
+const withdrawals = movements.filter(mov => mov < 0);
+console.log(withdrawals);
