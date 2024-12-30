@@ -451,3 +451,19 @@ console.log(avg1, avg2);
 // console.log(accounts);
 // const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 // console.log(account);
+
+console.log(movements);
+const lastWithdrawal = movements.findLast(mov => mov < 0); //if we use .find method: -400
+console.log(lastWithdrawal); //-130
+
+// ('Your latest large movement was X movements ago');
+
+const latestLargeMovementIndex = movements.findLastIndex(
+  mov => Math.abs(mov) > 1000
+);
+console.log(latestLargeMovementIndex);
+console.log(
+  `Your latest large movement was ${
+    movements.length - latestLargeMovementIndex
+  } movements ago`
+);
