@@ -629,12 +629,12 @@ console.log(heaviestFetchBreed);
 */
 
 //Strings
-const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
-console.log(owners.sort());
-console.log(owners);
+// const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+// console.log(owners.sort());
+// console.log(owners);
 
 //Numbers
-console.log(movements);
+// console.log(movements);
 
 //return < 0, A, B
 //return > 0, B, A
@@ -643,8 +643,8 @@ console.log(movements);
 //   if (a > b) return 1;
 //   if (a < b) return -1;
 // });
-movements.sort((a, b) => a - b);
-console.log(movements);
+// movements.sort((a, b) => a - b);
+// console.log(movements);
 
 //Descending
 // movements.sort((a, b) => {
@@ -652,5 +652,12 @@ console.log(movements);
 //   if (a < b) return 1;
 // });
 
-movements.sort((a, b) => b - a);
+// movements.sort((a, b) => b - a);
+// console.log(movements);
+
 console.log(movements);
+
+const groupedMovements = Object.groupBy(movements, movement =>
+  movement > 0 ? 'deposits' : 'withdrawals'
+);
+console.log(groupedMovements);
