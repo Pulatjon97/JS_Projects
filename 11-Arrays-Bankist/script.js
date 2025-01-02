@@ -683,17 +683,6 @@ console.log(heaviestFetchBreed);
 
 // console.log(groupedAccounts);
 
-const groupedByActivity = Object.groupBy(accounts, account => {
-  const movementCount = account.movements.length;
-
-  if (movementCount >= 8) return 'very active';
-  if (movementCount >= 4) return 'active';
-  if (movementCount >= 1) return 'moderate';
-  return 'inactive';
-});
-
-console.log(groupedByActivity);
-
 // const groupedAccounts = Object.groupBy(accounts, account => account.type);
 
 const groupedAccounts = Object.groupBy(accounts, ({ type }) => type);
