@@ -684,7 +684,3 @@ console.log(heaviestFetchBreed);
 // console.log(groupedAccounts);
 
 // const groupedAccounts = Object.groupBy(accounts, account => account.type);
-
-const groupedAccounts = Object.groupBy(accounts, ({ type }) => type);
-
-console.log(groupedAccounts);
