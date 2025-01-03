@@ -684,7 +684,7 @@ console.log(heaviestFetchBreed);
 // console.log(groupedAccounts);
 
 // const groupedAccounts = Object.groupBy(accounts, account => account.type);
-
+/*
 const arr = [1, 2, 3, 4, 5, 6, 7];
 console.log(new Array(1, 2, 3, 4, 5, 6, 7));
 
@@ -714,3 +714,16 @@ labelBalance.addEventListener('click', function () {
 
   const movementsUI2 = [...document.querySelectorAll('.movements__value')];
 });
+*/
+console.log(movements);
+const reversedMov = movements.toReversed();
+console.log(reversedMov);
+console.log(movements);
+
+//toSorted (sort), toSpliced (splice)
+
+// movements[1] = 2000;
+
+const newMovements = movements.with(1, 2000);
+console.log(newMovements);
+console.log(movements);
