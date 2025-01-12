@@ -325,26 +325,45 @@ console.log(Number.isSafeInteger(23 / 0));
 // console.log((2.7).toFixed(3));
 // console.log(+(2.345).toFixed(2));
 
-console.log(5 % 2);
-console.log(5 / 2); // 5 = 2 * 2 + 1
-console.log(8 % 3);
-console.log(8 / 3); // 8 = 2 * 3 + 2
+//// The Remainder Operator
 
-console.log(6 % 2);
-console.log(6 / 2);
+// console.log(5 % 2);
+// console.log(5 / 2); // 5 = 2 * 2 + 1
+// console.log(8 % 3);
+// console.log(8 / 3); // 8 = 2 * 3 + 2
 
-console.log(7 % 2);
-console.log(7 / 2);
+// console.log(6 % 2);
+// console.log(6 / 2);
 
-const isEven = n => n % 2 === 0;
-console.log(isEven(8));
-console.log(isEven(23));
-console.log(isEven(514));
+// console.log(7 % 2);
+// console.log(7 / 2);
 
-labelBalance.addEventListener('click', function () {
-  [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
-    if (i % 2 === 0) row.style.backgroundColor = 'orangered';
-    // 0, 3, 6, 9
-    if (i % 3 === 0) row.style.backgroundColor = 'blue';
-  });
-});
+// const isEven = n => n % 2 === 0;
+// console.log(isEven(8));
+// console.log(isEven(23));
+// console.log(isEven(514));
+
+// labelBalance.addEventListener('click', function () {
+//   [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+//     if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+//     // 0, 3, 6, 9
+//     if (i % 3 === 0) row.style.backgroundColor = 'blue';
+//   });
+// });
+
+///////////////////
+/// Numeric Separators
+// 287,460,000,000
+// const diameter = 287_460_000_000;
+// console.log(diameter);
+
+// const price = 345_99;
+// console.log(price);
+
+// const transferFee1 = 15_00;
+// const transferFee2 = 1_500;
+
+// const PI = 3.14_15;
+// console.log(PI);
+// console.log(Number('230_000'));
+// console.log(parseInt('230_000'));
