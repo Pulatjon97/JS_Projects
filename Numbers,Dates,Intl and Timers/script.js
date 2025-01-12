@@ -367,3 +367,37 @@ console.log(Number.isSafeInteger(23 / 0));
 // console.log(PI);
 // console.log(Number('230_000'));
 // console.log(parseInt('230_000'));
+
+///////
+//Working with bigInt
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+console.log(43534534534543534534534545345435n);
+console.log(BigInt(43534534));
+
+//Operations
+
+console.log(10000n + 10000n);
+console.log(3433534573468563485783465683456837465834658n * 10000000n);
+// console.log(Math.sqrt(16n));
+
+const huge = 32423423424234234234243234n;
+const num = 23;
+console.log(huge * BigInt(num));
+console.log(20n > 15);
+console.log(20n === 20);
+console.log(typeof 20n);
+console.log(20n == '20');
+
+// String Concats
+console.log(huge + ' is REALLY big!');
+
+//Divisions
+
+console.log(11n / 3n);
+console.log(10 / 3);
