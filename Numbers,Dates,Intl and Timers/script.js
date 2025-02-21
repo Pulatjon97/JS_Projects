@@ -365,6 +365,7 @@ labelBalance.addEventListener('click', function () {
   });
 });
 */
+/*
 /////////
 // Numeric Separators
 /////////
@@ -386,3 +387,40 @@ console.log(PI);
 console.log(Number('230_000')); // So we should use the numeric separator in real codes like creatin varibles or constants.Otherwise we may face a problen like this:
 console.log(230_000); // 230000
 console.log(parseInt('230_000')); // 230
+*/
+
+/////////
+/// Working with BigInt
+/////////
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+console.log(483345345345345345354564645764564565n);
+console.log(BigInt(48334534));
+
+// Operations
+console.log(10000n + 10000n);
+console.log(43537456346583453457634786578384658364753645n * 10000000n);
+// console.log(Math.sqrt(16n));
+// So some of the math operators may not work like Math.sqrt() or Math.abs() etc. It gives an error like this: "Uncaught TypeError: Cannot convert a BigInt value to a number"
+
+const huge = 43537456346583453457634786578384658364753645n;
+const num = 23;
+console.log(huge * BigInt(num));
+
+console.log(20n > 15);
+console.log();
+console.log(20n === 20);
+console.log(typeof 20n);
+console.log(20n == '20');
+
+console.log(huge + ' is REALLY big!!!');
+
+// Divisions
+console.log(11n / 3n);
+console.log(10 / 3);
