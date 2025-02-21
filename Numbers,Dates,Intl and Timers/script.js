@@ -339,6 +339,7 @@ console.log((2.234).toFixed(2));
 console.log(+(2.234).toFixed(2)); // toFixed method gives a string value
 */
 
+/*
 // Remainder Operator
 
 console.log(5 % 2);
@@ -363,3 +364,25 @@ labelBalance.addEventListener('click', function () {
     if (i % 3 === 0) row.style.backgroundColor = 'blue';
   });
 });
+*/
+/////////
+// Numeric Separators
+/////////
+// 287,460,000,000
+const diameter = 287460000000;
+console.log(diameter);
+
+const price = 245_99;
+console.log(price);
+
+const transferFee1 = 15_00;
+const transferFee2 = 1_500;
+console.log(transferFee1);
+console.log(transferFee2);
+
+const PI = 3.14_15;
+console.log(PI);
+
+console.log(Number('230_000')); // So we should use the numeric separator in real codes like creatin varibles or constants.Otherwise we may face a problen like this:
+console.log(230_000); // 230000
+console.log(parseInt('230_000')); // 230
