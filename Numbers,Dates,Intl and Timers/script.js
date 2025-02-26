@@ -86,7 +86,6 @@ const formatMovementDate = function (date, locale) {
     Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
   const daysPassed = calcDaysPassed(new Date(), date);
-  console.log(daysPassed);
 
   if (daysPassed === 0) return 'Today';
   if (daysPassed === 1) return 'Yesterday';
@@ -357,7 +356,7 @@ btnClose.addEventListener('click', function (e) {
 let sorted = false;
 btnSort.addEventListener('click', function (e) {
   e.preventDefault();
-  displayMovements(currentAccount.movements, !sorted);
+  displayMovements(currentAccount, !sorted);
   sorted = !sorted;
 });
 
@@ -624,4 +623,4 @@ setInterval(function () {
 }, 1000);
 */
 
-setTimeout(() => console.log('Here is your fucking pizza 🍕'), 7000);
+// setTimeout(() => console.log('Here is your fucking pizza 🍕'), 7000);
