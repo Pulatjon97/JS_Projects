@@ -31,9 +31,9 @@ document.addEventListener('keydown', function (e) {
 });
 
 // Selecting Elements
-console.log(document.documentElement);
-console.log(document.head);
-console.log(document.body);
+// console.log(document.documentElement);
+// console.log(document.head);
+// console.log(document.body);
 
 const header = document.querySelector('.header');
 const allSections = document.querySelectorAll('.section');
@@ -52,7 +52,7 @@ message.insertAdjacentHTML(
   'afterbegin',
   "<p>Hi, I'm a message, Wossap nigga?</p>"
 );
-console.log(message);
+// console.log(message);
 message.classList.add('cookie-message');
 // message.textContent =
 //   'We use cookied for improved functionalities and analytics';
@@ -79,16 +79,14 @@ document
 message.style.backgroundColor = '#37383d';
 message.style.width = '120%';
 
-console.log(message.style.color);
-console.log(message.style.backgroundColor);
-
-console.log(getComputedStyle(message).color);
-console.log(getComputedStyle(message).height);
+// console.log(message.style.color);
+// console.log(message.style.backgroundColor);
 message.style.height =
   Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
 
 document.documentElement.style.setProperty('--color-primary', 'cyan');
 
+/*
 // Attributes
 const logo = document.querySelector('.nav__logo');
 console.log(logo.alt);
@@ -120,3 +118,37 @@ logo.classList.contains('c');
 
 //Don't use it because it will overwrite all the classes
 logo.className = 'jonas';
+*/
+
+// Smooth Scrolling
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log('Current Scroll (X/Y)', window.scrollX, window.scrollY);
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // Scrolling
+  // window.scrollTo(
+  //   s1coords.left + window.scrollX,
+  //   s1coords.top + window.scrollY
+  // );
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.scrollX,
+  //   top: s1coords.top + window.scrollY,
+  //   behavior: 'smooth',
+  // });
+
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
